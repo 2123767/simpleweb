@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felix</title>
+  <style>
+    
+     .search-box {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  
+    button
+    {
+      background-color: rgb(29, 161, 29);
+    }
+    
+    .full-width-video {
+      width: 100vw; /* Full viewport width */
+      height: 50vh; /* Adjust height as needed (e.g., 50% of viewport height for a banner) */
+      overflow: hidden; /* Prevents overflow */
+      position: relative;
+    }
+        
+        /* Video styling */
+    .full-width-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Covers the area without distortion, cropping if needed */
+      display: block; /* Removes default spacing */
+    }
+       
+        
+        /* Optional: Make it responsive for smaller screens */
+    @media (max-width: 768px) {
+      .full-width-video {
+       height: 30vh; /* Shorter on mobile */
+      }
+    }
+    
+ /* navbar */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:green;
+    padding: 15px 20px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight:bolder;
+  }
+
+  /* Hide checkbox */
+  #menu-toggle {
+    display: none;
+  }
+
+  /* Nav links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+.nav-links a:hover {
+  color: #00adb5;
+}
+
+/* Hamburger */
+.menu-icon {
+  display:none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Mobile styles */
+  @media (max-width: 768px) {
+
+    .menu-icon {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #222;
+      flex-direction: column;
+      align-items: center;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .nav-links li {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Expand menu when checked */
+    #menu-toggle:checked ~ .nav-links {
+      max-height: 300px;
+    }
+
+    /* Animate hamburger to X */
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  } 
+
+.butt:hover{
+  background-color:yellow;
+  color: blue;
+  
+}
+
+.button{
+  margin-top: 2px;
+  width: 160px;
+  height: 30px;
+  border-radius: 10px;
+  
+}
+th{
+  font-style: italic;
+  color: blue;
+  border-style: dotted;
+}
+td{
+  border-style: dotted;
+  border-radius: 10px;
+}
+table{
+  text-align: center;
+  font-weight: bold;
+  border: dotted;
+  border-style: dotted;
+}
+a{
+  text-decoration: none;
+
+}
+
+    
+
+
+</style>
+
+
+</head>
+<body background=url(mov_bbb.mp4) > 
+  <!-- navbar -->
+  <div>
+
+    <nav class="navbar">
+      <div class="logo" style="font-style: italic;">Online Enterprise</div>
+      
+      <!-- Hidden checkbox -->
+      <input type="checkbox" id="menu-toggle">
+      <div class="search-box">
+  <form action="https://www.google.com/search" method="GET" target="_parent">
+    <input type="text" name="q" placeholder="Search Google..." required>
+    <button type="submit" class="butt">Search</button>
+  </form>
+</div>
+      
+      <!-- Hamburger icon -->
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        
+      </label>
+      
+      <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="intro.html">Home</a></li>
+        <li><a href="items.html">Items</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="signup.html">Signup</a></li>
+      </ul>
+    </nav><br><br>
+    
+  </div>
+  <a id="top"></a>
+  <p>
+  <a href="#bottom">
+    <button class="button">Go to bottom</button>
+  </a>
+  
+</p>
+
+  <h1>online enterprice</h1>
+  <img src="slide3.jpg" width="100%">
+
+  <marquee behavior="" direction="left"><h2>welcome to our online enterprise and save money</h2></marquee>
+<button class="button">
+  <a href="signup.html">
+    signup
+  </a>
+</button>
+<p><b>Welcome to our online enterprice</b></p>
+  <p style="color: blue; font-style: italic;"></p>
+ <p>we are located in muranga town opposite magunas supermarket along the muranga road <br>
+  we specuialize in electronics such as phones, televisions, cookers and furnitures</p>
+  <ul>
+    <li>sales manager: 071232543</li>
+    <li>delivery person: 076386383</li>
+    <li>customer service: 07536352462</li>
+  </ul>
+  <button style=" position: relative;" class="button">
+  
+     <a href="items.html" style="text-decoration: none;" ><b>click to view items</b></a></button>
+     
+     <h2></h2>
+     <table border="5px" width="80%" height="50%" >
+      <caption>ITEM DISCOUNT TABLE</caption>
+      <tr style="height: 50px;">
+        <th>ITEM</th>
+        <th>PRICE</th>
+        <th>DISCOUNT</th>
+        <th>DELIVERY</th>
+      </tr>
+      <tr>
+        <td>Electric Cooker</td>
+        <td>30000</td>
+        <td rowspan="2">10%</td>
+        <td rowspan="2">free</td>
+      </tr>
+      <tr>
+        <td>toaster</td>
+        <td>23822</td>
+      </tr>
+      <tr>
+        <td rowspan="3">iphone</td>
+        <td rowspan="3">45000</td>
+        <tr>
+          <th>percentage</th>
+          <th>cash</th>
+
+        </tr>
+        <tr>
+          <td>20%</td>
+          <td>200</td>
+
+        </tr>
+       
+        
+      </tr>
+     
+      <tr>
+        <td>mouse</td>
+        <td>2000</td>
+        <td colspan="2">200</td>
+      </tr>
+      <tr>
+       
+
+      </tr>
+     </table>
+      <a href="items.csv " download>
+          <button style="width: fit-content;" class="button">Download Table</button>
+        </a>
+     <br><br>
+     <p>
+      <a id="bottom"></a>
+
+  <a href="#top">
+    <button class="button">Go to top</button>
+  </a>
+
+</p>
+     
+
+
+  <footer style="background-color: black; margin-top: auto; padding: 10px;text-align: center;">
+  <p style="color: rgb(232, 235, 238);" ><i>
+     developed by online enterprise  &#169; in the year 2026</i>
+  </p>
+
+ 
+</footer>
+
+
+</body>
+</html>

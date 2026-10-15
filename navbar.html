@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Box</title>
+  <style>
+    .search-box {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="search-box">
+  <form action="https://www.google.com/search" method="GET" target="_parent">
+    <input type="text" name="q" placeholder="Search Google..." required>
+    <button type="submit">Search</button>
+  </form>
+</div>
+<input id="message" />
+<button onclick="send()">Send</button>
+
+<script>
+async function send() {
+  const msg = document.getElementById("message").value;
+  const res = await fetch("/chat", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({message: msg})
+  });
+  const data = await res.json();
+  console.log(data.reply);
+}
+</script>
+
+</body>
+</html>

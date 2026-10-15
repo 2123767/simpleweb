@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>online shop items</title>
+  <style>
+    h1{
+      color: blue;
+
+    }
+    .container{
+      display: flex;
+    }
+    .column{
+      flex: 1;
+      padding: 15px;
+    }
+    img{
+      transition: 1s;
+    }
+    img:hover{
+      transform: scale(1.5);
+    }
+    .spin{
+      display: inline-block;
+      animation: spinY 5s alternate linear infinite;
+    }
+    @keyframes spinY{
+      from{
+        transform: rotateY(0deg);
+      }
+      to{
+        transform: rotateY(180deg);
+      }
+    }
+    /* navbar */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:green;
+    padding: 15px 20px;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    
+  }
+
+  .logo {
+    font-size: 20px;
+    font-weight:bolder;
+  }
+
+  /* Hide checkbox */
+  #menu-toggle {
+    display: none;
+  }
+
+  /* Nav links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+.nav-links a:hover {
+  color: #00adb5;
+}
+
+/* Hamburger */
+.menu-icon {
+  display:none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Mobile styles */
+  @media (max-width: 768px) {
+
+    .menu-icon {
+      display: flex;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #222;
+      flex-direction: column;
+      align-items: center;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .nav-links li {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Expand menu when checked */
+    #menu-toggle:checked ~ .nav-links {
+      max-height: 300px;
+    }
+
+    /* Animate hamburger to X */
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+  </style>
+</head>
+<body style="background-color: aqua;">
+   <!-- navbar -->
+  <div>
+
+    <nav class="navbar">
+      <div class="logo">ONLINE ENTERPRISE</div>
+      
+      <!-- Hidden checkbox -->
+      <input type="checkbox" id="menu-toggle">
+      
+      <!-- Hamburger icon -->
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        
+      </label>
+      
+      <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="intro.html">Home</a></li>
+        <li><a href="items.html">Items</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="signup.html">Signup</a></li>
+      </ul>
+    </nav><br><br>
+    
+  </div>
+  <h1 id="1">items available </h1>
+  <div class="container">
+    <div class="column">
+      <h3>cooker</h3>
+      <img src="cooker.jpg" alt="cooker" width="300" height="300"> 
+      <h3>price: 30000</h3>
+      <p style="font-size: large;">
+          This is a four burner electonic cooker currently on the market on a discount offer of 5% till the end of january and comes with a promotional door to door free delivery 
+      </p>
+
+    </div>
+     <div class="column">
+        <h3>toaster</h3>
+        <img src="Mika2slicetoaster.png" alt="toaster" width="300" height="300" class="spin">
+        <h3>price: 23822</h3>
+        <p style="font-size: large;">
+          This is an electronic toaster from germany on a 10% discount <br> now available on free door to door delivery 
+        </p>
+     
+    </div>
+     <div class="column">
+       <h3>iphone</h3>
+    <img src="phone1.jpg" alt="phone" width="300" height="300">
+    <h3>price: 45000</h3>
+    <p>
+      buy one get one free 
+
+    </p>
+     
+    </div>
+    <div class="column">
+       <h3>75 inch TV</h3>
+    <img src="screen6.jpg" alt="TELEVISION" width="300" height="300" class="spin">
+    <h3>price: 145000</h3>
+    <p>
+      Buy and get free delivery. we also offer free wall mounting you can also get a discount of 20% if you buy in the january offer period. 
+
+    </p>
+  
+  </div>
+  
+  </div>
+  <hr style="padding:5px; background-color:blue; margin: 20px;  height: 5px;">
+  
+  <div class="container">
+    <div class="column">
+      <h3>kettle</h3>
+      <img src="alionskettle.jpg" alt="kettle" width="300" height="300"> 
+      <h3>price: 3000</h3>
+      <p style="font-size: large;">
+          An electric kettle on a 10% discount buy now and save 10% of your money 
+      </p>
+
+    </div>
+     <div class="column">
+        <h3>Electric Iron</h3>
+        <img src="appl3.jpg" alt="Iron" width="300" height="300" class="spin">
+        <h3>price: 3822</h3>
+        <p style="font-size: large;">
+          An electric kettle going for only three thousand shillings you also get a one mont warrant. 
+        </p>
+     
+    </div>
+     <div class="column">
+       <h3>Pillow</h3>
+    <img src="bed10.jpg" alt="Pillow" width="300" height="300">
+    <h3>price: 300</h3>
+    <p>
+      All types of kitchen utensils are available come and pick your choice at the lowest price possible. 
+
+    </p>
+     
+    </div>
+    <div class="column">
+       <h3>75 inch TV</h3>
+    <img src="screen3.jpg" alt="TELEVISION" width="300" height="300" class="spin">
+    <h3>price: 145000</h3>
+    <p>
+     Buy and get free delivery. we also offer free wall mounting you can also get a discount of 20% if you buy in the january offer period. 
+
+    </p>
+  
+  </div>
+  
+  </div>
+
+  <div class="container">
+    <div class="column">
+      <h3>Whiskey</h3>
+      <img src="dom-perignon.webp" alt="Whiskey" width="300" height="300"> 
+      <h3>price: 3000</h3>
+      <p style="font-size: large;">
+          An electric kettle on a 10% discount buy now and save 10% of your money 
+      </p>
+
+    </div>
+     <div class="column">
+        <h3>Carpet
+        </h3>
+        <img src="decor4.jpg" alt="Carpet" width="300" height="300" class="spin">
+        <h3>price: 3822</h3>
+        <p style="font-size: large;">
+          An electric kettle going for only three thousand shillings you also get a one mont warrant. 
+        </p>
+     
+    </div>
+     <div class="column">
+       <h3>Utensils</h3>
+    <img src="appl2.jpg" alt="utensils" width="300" height="300">
+    <h3>price: 300</h3>
+    <p>
+      All types of kitchen utensils are available come and pick your choice at the lowest price possible. 
+
+    </p>
+     
+    </div>
+    <div class="column">
+      <h3>75 inch TV</h3>
+      <img src="screen2.jpg" alt="TELEVISION" width="300" height="300" class="spin">
+      <h3>price: 145000</h3>
+      <p>
+        Buy and get free delivery. we also offer free wall mounting you can also get a discount of 20% if you buy in the january offer period. 
+
+      </p>
+  
+  </div>
+  
+  </div>
+  <button style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large; background-color: yellow;"><a href="/order.html">MAKE ORDERS</a></button>
+<footer style="background-color: black; margin-top: auto; padding: 10px;text-align: center;">
+  <p style="color: rgb(232, 235, 238);" ><i>
+     developed by online enterprise  &#169; in the year 2026</i>
+  </p>
+
+ 
+</footer>
+  
+
+  
+</body>
+</html>
